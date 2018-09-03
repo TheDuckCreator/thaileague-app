@@ -25,6 +25,13 @@ img.img-logo{
     margin-right:0.25em;
     margin-left:0.5em;
 }
+img.img-logo2{
+    width:110px;
+    height:35px;
+    margin-top:0.1em;
+    margin-right:0.25em;
+    margin-left:0.5em;
+}
 div.flexdiv{
     display:flex;
 }

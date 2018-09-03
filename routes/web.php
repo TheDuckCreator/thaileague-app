@@ -59,6 +59,8 @@ Route::get('admin/warroom/goal/{id}/{team}/{player}/{code}','ThaileagueAdminCont
 Route::get('admin/warroom/owngoal/{id}/{team}/{player}','ThaileagueAdminController@owngoal');
 Route::post('admin/warroom/finalscore','ThaileagueAdminController@finalscore');
 Route::post('admin/warroom/com','ThaileagueAdminController@comment');
+Route::get('admin/mainadmin','ThaileagueAdminController@MasterAdmin');
+Route::post('admin/changematchweek','ThaileagueAdminController@ActiveNewMatchweek');
 
 //Frontpage Extention
 Route::get('/match','thaileaguecontroller@showmatch');

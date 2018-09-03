@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+//use App\Http\Controllers\Auth;
+//use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input; //ใช้คำสั่ง Input
 use Illuminate\Support\Facades\DB;  //ใช้คำสั่ง DB หรือ Database
 use Illuminate\Support\Facades\Redirect; //ใช้คำสั่ง Redirect
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\File;
+//use Illuminate\Contracts\Auth\Authenticatable;
 
 class ThaileagueAdminController extends Controller {
     //Backend Server
@@ -1065,4 +1068,27 @@ class ThaileagueAdminController extends Controller {
         return Redirect::to('/admin/allmatch');
         
     }    
+
+    public function MasterAdmin(){
+            $matchweek = DB::table('matchweek')->where('active','1')->first();
+            $allmatchweek = DB::table('matchweek')->orderBy('id','ASC')->get();
+            return view("admin.masteradmin")
+            ->with('currentmatchweek',$matchweek)
+            ->with('allmatchweek',$allmatchweek);
+    }
+
+    public function ActiveNewMatchweek(Request $request){
+        $newmatchweek=$request->input('newmatchweek');
+        //$matchweek = DB::table('matchweek')->where('active','1')->first();
+        DB::table("matchweek")->where('active','1')->update(
+            [
+                'active'=>'0']
+            );
+        DB::table("matchweek")->where('matchweek',$newmatchweek)->update(
+            [
+                    'active'=>'1']
+            );
+        return Redirect::to('admin/allteam');
+    }
+
 }

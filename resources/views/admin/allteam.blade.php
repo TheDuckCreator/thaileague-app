@@ -8,6 +8,7 @@
     <h4 class="kanit">ทีมทั้งหมด
         <a href="../teamupdate" ><button id="addteam" class="btn btn-success kanitlight" disabled  data-toggle="tooltip" title="จะเปิดระบบเมื่อสิ้นสุดฤดูกาล" >เพิ่มทีม</button></a> 
         <a href="{{url('admin/allmatch')}} "><button class="btn btn-info kanitlight">จัดการแมตซ์การแข่งขัน</button> </a>
+        <a href="{{url('admin/mainadmin')}} "><button class="btn btn-warning kanitlight">Matchweek Controller</button> </a>
     </h4> <hr>
     <script>
         $('#addteam').tooltip('show')

@@ -1,20 +1,21 @@
 @section("header")
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand kanit" href="{{url('/admin/allteam')}}"><img class="img-logo"src="{{URL::asset('photo/thaileague.png')}}"> Thaileague App Admin</a>
+  <a class="navbar-brand kanit" href="{{url('/admin/allteam')}}"><img class="img-logo2"src="{{URL::asset('photo/tl_longlogo.png')}}"> Unofficial Admin</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse kanitlight" id="navbarNav">
     <ul class="navbar-nav">
+    
       <li class="nav-item ">
-        <a class="nav-link" href="{{url('/admin/allteam')}}">Dashboard <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{{url('/admin/allteam')}}">หน้าหลักแอดมิน/จัดการทีม <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item ">
         <a class="nav-link" href="{{url('/admin/allmatch')}}">จัดการแมตซ์ <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{url('/')}}"> หน้าหลักแอป</a>
+        <a class="nav-link" href="{{url('/')}}" target="_blank"> หน้าหลักแอป</a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
