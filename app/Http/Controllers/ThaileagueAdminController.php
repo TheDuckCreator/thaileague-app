@@ -1091,4 +1091,14 @@ class ThaileagueAdminController extends Controller {
         return Redirect::to('admin/allteam');
     }
 
+    public function AllNews(){
+        $allnews=DB::table("news")->orderBy('updated_at','DESC')->get();
+        return view("admin.newsshow")
+        ->with('news',$allnews);
+    }
+
+    public function Addnews(){
+        return view("admin.newsadding");
+    }
+
 }

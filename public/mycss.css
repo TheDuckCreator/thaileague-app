@@ -74,9 +74,14 @@ div.flexdiv3{
 }
 .highlight-1{
     height:80px;
+    width: 150px;
 }
 .highlight-c{
     width:150px;
+}
+.highlight-title-1{
+    width: 1030px;
+    margin-left:1em;
 }
 /*clubinfopage*/
 img.stadium-photo{ /*for sometime case*/
