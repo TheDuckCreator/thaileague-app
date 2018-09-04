@@ -1101,4 +1101,28 @@ class ThaileagueAdminController extends Controller {
         return view("admin.newsadding");
     }
 
+    public function ActiveNews(Request $request){
+        //input value
+        $heading=$request->input('heading');
+        $info=$request->input('newsinfo');
+        $link=$request->input('url');
+        $agency=$request->input('agency');
+
+        $imagepath="public/newsphoto/";
+       
+        $path = $request->file('photo')->store($imagepath);
+        $visibility = Storage::getVisibility($path);
+        Storage::setVisibility($path, 'public');
+        $fileurl1 = Storage::url($path);
+
+        DB::table("news")->insert(
+            ['heading'=>$heading,
+            'newsinfo'=>$info,
+            'photo'=>$fileurl1,
+            'link'=>$link,
+            'agency'=>$agency]
+        );
+        return Redirect::to('admin/allnews');
+    }
+
 }

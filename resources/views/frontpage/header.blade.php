@@ -17,7 +17,8 @@
         <li><a href="{{url('match')}}">แมตซ์การแข่งขัน</a></li>
         <li><a href="{{url('table')}}" >ตารางคะแนน</a></li>
         <li><a href="{{url('allclub')}}">สโมสร</a></li>
-        <li><a href="mobile.html">ข่าวและประกาศ</a></li>
+        <li><a href="{{url('news')}}">ข่าวและประกาศ</a></li>
+        <li><a href="https://www.thaileague.co.th">เว็บไซต์ไทยลีก</a></li>
       </ul>
     </div>
     @else
@@ -34,7 +35,8 @@
         <li><a href="{{url('match')}}">แมตซ์การแข่งขัน</a></li>
         <li><a href="{{url('table')}}" >ตารางคะแนน</a></li>
         <li><a href="{{url('allclub')}}">สโมสร</a></li>
-        <li><a href="mobile.html">ข่าวและประกาศ</a></li>
+        <li><a href="{{url('news')}}">ข่าวและประกาศ</a></li>
+        <li><a href="https://www.thaileague.co.th">เว็บไซต์ไทยลีก</a></li>
       </ul>
     </div>
   @endif
@@ -49,10 +51,12 @@
 
   <ul class="sidenav kanitlight" id="mobile-demo">
     <li><a href="{{url('/')}}" ><img src="{{URL::asset('photo/T1.png')}} "></a></li>
+    <li><a href="{{url('/')}}" >Thai League 1 Unofficial Application</a></li>
     <li><a href="{{url('match')}}">แมตซ์การแข่งขัน</a></li>
     <li><a href="{{url('table')}}" >ตารางคะแนน</a></li>
     <li><a href="{{url('allclub')}}">สโมสร</a></li>
-    <li><a href="mobile.html">ข่าวและประกาศ</a></li>
+    <li><a href="{{url('news')}}">ข่าวและประกาศ</a></li>
+    <li><a href="https://www.thaileague.co.th">เว็บไซต์ไทยลีก</a></li>
   </ul>
   
 

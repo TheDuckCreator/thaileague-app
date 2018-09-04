@@ -13,7 +13,7 @@
         <li class="tab"><a href="#info">เกี่ยวกับสโมสร</a></li>
         <li class="tab"><a href="#player">รายชื่อผู้เล่น</a></li>
         <li class="tab "><a href="#result">ผลและตารางการแข่งขัน</a></li>
-        <li class="tab"><a href="#test4">Test 4</a></li>
+        <li class="tab"><a href="#facebook">Facebook</a></li>
       </ul>
     </div>
 </nav>
@@ -168,7 +168,21 @@
   
   
   </div>
-  <div id="test4" class="col s12">Test 4</div>
+  <div id="facebook" class="col s12">
+  <div id="fb-root"></div>
+    <script>
+    (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v3.1&appId=389712018153235&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+  </div>
+
+  <div class="fb-page" data-href="{{$club->facebook}}" data-width="450" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/theduckcreatorthailand/" class="fb-xfbml-parse-ignore"><a href="{{$club->facebook}}">{{$club->facebookname}}</a></blockquote></div>
 
 
 

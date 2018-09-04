@@ -18,12 +18,14 @@ class thaileaguecontroller extends Controller {
         $activematchweek=$matchweek->matchweek;
         $match=DB::table('matchset')->where('matchweek',$activematchweek)->orderBy('date','ASC')->orderBy('time','ASC')->get();
         $hightlight=DB::table('videohighlight')->orderBy('id',"DESC")->take(9)->get();
+        $allnews=DB::table("news")->orderBy('updated_at','DESC')->take(6)->get();
         return view('frontpage.front')
         ->with('allteam',$team)
         ->with('allmatch',$match)
         ->with('navtheme','')
         ->with('table',$teamtable)
-        ->with('matchhighlight',$hightlight);
+        ->with('matchhighlight',$hightlight)
+        ->with('news',$allnews);
     }
     
     public function clubinfo($club){
@@ -141,6 +143,13 @@ class thaileaguecontroller extends Controller {
         return view('frontpage.allmatch')
         ->with('allmatch',$match)
         ->with('overmatch',$overmatch)
+        ->with('navtheme','');
+    }
+
+    public function viewnews(){
+        $allnews=DB::table("news")->orderBy('updated_at','DESC')->get();
+        return view("frontpage.newsshow")
+        ->with('news',$allnews)
         ->with('navtheme','');
     }
 }

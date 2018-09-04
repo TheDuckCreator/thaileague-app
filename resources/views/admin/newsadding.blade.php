@@ -16,6 +16,7 @@
                 <label class="kanit">ภาพข่าว</label><br>
                     <input type="file" name="photo" id="photo">
                 <br> <br>
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <button type="submit" class="btn btn-success kanitlight">บันทึกข่าว</button>
             </form>
         @endauth

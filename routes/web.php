@@ -23,6 +23,7 @@ Route::get('/index','thaileaguecontroller@index');
 Route::get('/table','thaileaguecontroller@clubranking');
 Route::get('/allclub','thaileaguecontroller@allclubshow');
 Route::get('/match/{id}','thaileaguecontroller@matchinfo');
+Route::get('news','thaileaguecontroller@viewnews');
 
 //BLACK END
 Route::get('/teamupdate', 'ThaileagueAdminController@adding');
@@ -63,7 +64,7 @@ Route::get('admin/mainadmin','ThaileagueAdminController@MasterAdmin');
 Route::post('admin/changematchweek','ThaileagueAdminController@ActiveNewMatchweek');
 Route::get('admin/allnews','ThaileagueAdminController@AllNews');
 Route::get('admin/allnews/newadding','ThaileagueAdminController@AddNews');
-
+Route::post('admin/allnews/activenews','ThaileagueAdminController@ActiveNews');
 
 //Frontpage Extention
 Route::get('/match','thaileaguecontroller@showmatch');
