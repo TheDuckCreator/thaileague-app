@@ -1135,4 +1135,33 @@ class ThaileagueAdminController extends Controller {
         return Redirect::to('admin/allnews');
     }
 
+    public function DeleteNews($id){
+        DB::table('news')->where('id',$id)->delete();
+        return Redirect::to('admin/allnews');
+    }
+
+    public function EditNews($id){
+        $thisnews=DB::table('news')->where('id',$id)->first();
+        return view("admin.editnews")
+        ->with('news',$thisnews);
+    }
+
+    public function ActiveEditNews(Request $request){
+        //Input Data
+        $heading=$request->input('heading');
+        $info=$request->input('newsinfo');
+        $link=$request->input('url');
+        $agency=$request->input('agency');
+        $id=$request->input('newsid');
+        //Update
+        DB::table("news")->where('id',$id)->update(
+            [
+                'heading'=>$heading,
+                'newsinfo'=>$info,
+                'link'=>$link,
+                'agency'=>$agency]
+            );
+        return Redirect::to('admin/allnews');
+    }
+
 }

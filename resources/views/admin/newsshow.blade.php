@@ -22,7 +22,12 @@
                     <td>{{$allnews->heading}} </td>
                     <td>{{$allnews->newsinfo}} </td>
                     <td>{{$allnews->agency}}</td>
-                    <td>-</td>
+                    <td>
+                        <div class="flexdiv">
+                            <a href="{{url('admin/allnews/edit/'.$allnews->id)}}"><button class="btn btn-light" title="แก้ไข"><i class="fas fa-edit"></i></button></a>
+                            <a href="{{url('admin/allnews/delete/'.$allnews->id)}}"><button class="btn btn-danger" title="ลบ"><i class="fas fa-minus-circle"></i></button></a>
+                        </div>
+                    </td>
                 </tr>
             @endforeach
             </tbody>

@@ -15,7 +15,10 @@
         <a class="nav-link" href="{{url('/admin/allmatch')}}">จัดการแมตซ์ <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{url('/')}}" target="_blank"> หน้าหลักแอป</a>
+        <a class="nav-link" href="{{url('admin/allnews')}}">เพิ่ม/แก้ไขข่าว</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url('/')}}" target="_blank">หน้าหลักแอป</a>
       </li>
       
       

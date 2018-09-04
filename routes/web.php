@@ -62,9 +62,13 @@ Route::post('admin/warroom/finalscore','ThaileagueAdminController@finalscore');
 Route::post('admin/warroom/com','ThaileagueAdminController@comment');
 Route::get('admin/mainadmin','ThaileagueAdminController@MasterAdmin');
 Route::post('admin/changematchweek','ThaileagueAdminController@ActiveNewMatchweek');
+//News
 Route::get('admin/allnews','ThaileagueAdminController@AllNews');
 Route::get('admin/allnews/newadding','ThaileagueAdminController@AddNews');
 Route::post('admin/allnews/activenews','ThaileagueAdminController@ActiveNews');
+Route::get('admin/allnews/delete/{id}','ThaileagueAdminController@DeleteNews');
+Route::get('admin/allnews/edit/{id}','ThaileagueAdminController@EditNews');
+Route::post('admin/allnews/activeeditnews','ThaileagueAdminController@ActiveEditNews');
 
 //Frontpage Extention
 Route::get('/match','thaileaguecontroller@showmatch');
