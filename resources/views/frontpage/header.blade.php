@@ -57,6 +57,7 @@
     <li><a href="{{url('allclub')}}">สโมสร</a></li>
     <li><a href="{{url('news')}}">ข่าวและประกาศ</a></li>
     <li><a href="https://www.thaileague.co.th">เว็บไซต์ไทยลีก</a></li>
+    <li><a href="{{url('about')}}">เกี่ยวกับเรา</a></li>
   </ul>
   
 

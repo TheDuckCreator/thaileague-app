@@ -152,4 +152,9 @@ class thaileaguecontroller extends Controller {
         ->with('news',$allnews)
         ->with('navtheme','');
     }
+
+    public function about(){
+        return view("frontpage.about")
+        ->with('navtheme','');
+    }
 }

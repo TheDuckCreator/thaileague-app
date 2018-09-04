@@ -72,3 +72,4 @@ Route::post('admin/allnews/activeeditnews','ThaileagueAdminController@ActiveEdit
 
 //Frontpage Extention
 Route::get('/match','thaileaguecontroller@showmatch');
+Route::get('/about','thaileaguecontroller@about');
