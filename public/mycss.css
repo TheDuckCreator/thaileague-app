@@ -14,6 +14,10 @@
 .acenter{
     text-align: center;
 }
+.small-p{
+    font-size: 12px;
+    margin-top:0.1em;
+}
 /*header*/
 .head-font{
     font-size: 20px;
@@ -42,6 +46,9 @@ div.flexdiv{
 
 
 /*frontpage*/
+img.fanzone-2{
+    max-height: 150px;
+}
 hr.hr-front{
     border: solid lightgray 0.5px;
 }
@@ -85,6 +92,12 @@ div.flexdiv3{
 }
 .highlight-title-2{
     width: 150px;
+    height: 170px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.highlight-title-3{
+    width: 200px;
 }
 /*clubinfopage*/
 img.stadium-photo{ /*for sometime case*/
@@ -149,6 +162,7 @@ img.clubinfo-teamlogo{
     }
     .fanzone-1{
         height: 160px;
+        width:150px;
     }
     
     img.stadium-photo{

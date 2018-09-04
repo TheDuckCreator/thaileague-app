@@ -1,7 +1,7 @@
 @section("header")
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand kanit" href="{{url('/admin/allteam')}}"><img class="img-logo2"src="{{URL::asset('photo/tl_longlogo.png')}}"> Unofficial Admin</a>
+  <a class="navbar-brand kanit" href="{{url('/admin/allteam')}}"><img class="img-logo2"src="{{URL::asset('photo/tl_longlogo.png')}}"> Unofficial</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -17,9 +17,7 @@
       <li class="nav-item">
         <a class="nav-link" href="{{url('/')}}" target="_blank"> หน้าหลักแอป</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
+      
       
     </ul>
       <ul class="navbar-nav ml-auto">

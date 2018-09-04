@@ -15,7 +15,7 @@
                     @endif
                     <div class="highlight-title-2">
                         <a class="red-text text-accent-4 kanit" href="{{url($allnews->link)}}">{{$allnews->heading}} </a>
-                        <small class="kanitlight"> <span class="new badge grey lighten-4 black-text" style="overflow:hidden;">{{$allnews->agency}}</span> {{$allnews->newsinfo}} </small>
+                        <p class="small-p kanitlight"><span class="new badge grey lighten-4 black-text" style="overflow:hidden;">{{$allnews->agency}}</span> {{$allnews->newsinfo}}</p>
                     </div>
                  </div>
         @endforeach
@@ -174,9 +174,9 @@
         </div>
     </div>
 
-    <div class="content c-fanzone">
+    <div class="content c-fanzone" >
         <h5 class="kanit fronttitle red-text text-accent-4"> Fanzone</h5><hr class="hr-front">
-        <div class="row flexdiv3">
+        <div class="row flexdiv3" style="overflow-x:auto;">
 
          <div class="col s7 l4 ">
             <div class="card fanzone-1">
@@ -198,6 +198,18 @@
                 </div>
                 <div class="card-action">
                     <a class="red-text text-accent-4 kanit "href="https://line.me/R/ti/p/%40changsuek">เซียนไทยลีก</a>
+                 </div>
+            </div>
+        </div><!--for col s7 l4-->
+
+        <div class="col s7 l4 ">
+            <div class="card fanzone-1 ">
+            <!-- Card Content -->
+                <div class="card-image">
+                    <img class="fanzone-2" src="{{URL::asset('photo/eleague.png')}} ">
+                </div>
+                <div class="card-action">
+                    <a class="red-text text-accent-4 kanit "href="https://www.facebook.com/ThaiELeaguePro/">Thai E-league Pro</a>
                  </div>
             </div>
         </div><!--for col s7 l4-->

@@ -34,7 +34,7 @@
     </div>
     <hr>
 
-    <form action="{{url('admin/matchupdate')}}" method="post">
+    <form action="{{url('admin/matchupdate')}}" method="post" enctype="multipart/form-data">
         <input class="form-control kanitlight" name="matchweek" value="{{$match->matchweek}}" required hidden>
         <label class="kanit">Match ID</label>
         <input class="form-control kanitlight" name="id" value="{{$match->id}}" required readonly>
@@ -158,7 +158,7 @@
             </div>
 
             <hr>
-            <h6 class="kanit">การถ่ายทอดสด <span class="ถ้ายังไม่มีการระบุก็ใส่ว่าไม่ระบุ"</h6>
+            <h6 class="kanit">การถ่ายทอดสด <span class="ถ้ายังไม่มีการระบุก็ใส่ว่าไม่ระบุ"></h6>
             <div class="row">
             
                 <div class="col-sm">
@@ -276,6 +276,8 @@
             <img src="{{URL::asset('photo/youtubeguide.png')}}" style="width:400px;height:200px;display:block;margin-left:auto;margin-right:auto;">
             <br>
             <input type="url" class="form-control kanitlight" name="highlight" value="https://www.youtube.com/embed/" >
+            <label class="kanit">Match Photo</label>
+            <input type="file"  name="matchphoto" id="matchphoto" required>
             @endif
             <hr>
             <br>

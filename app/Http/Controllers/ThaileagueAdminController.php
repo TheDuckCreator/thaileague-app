@@ -202,6 +202,8 @@ class ThaileagueAdminController extends Controller {
                 'awayteam'=>$awayteam,
                 'homecode'=>$homecode,
                 'awaycode'=>$awaycode,
+                'hometeamlogo'=>$homelogo,
+                'awayteamlogo'=>$awaylogo,
                 'stadium'=>$stadium,
                 'matchcomment'=>$matchinfo,
                 'status'=>'prematch',
@@ -518,6 +520,13 @@ class ThaileagueAdminController extends Controller {
         
         $highlight=$request->input('highlight');
         if($highlight!=NULL){
+            $imagepath="public/highlightphoto/";
+       
+            $path = $request->file('matchphoto')->store($imagepath);
+            $visibility = Storage::getVisibility($path);
+            Storage::setVisibility($path, 'public');
+            $fileurl1 = Storage::url($path);
+
             DB::table('matchset')
                ->where('id', $matchid)
                ->update(['highlight' => $highlight]);
@@ -527,6 +536,7 @@ class ThaileagueAdminController extends Controller {
                 ['matchid'=>$matchid,
                 'hometeam'=>$match->hometeam,
                 'awayteam'=>$match->awayteam,
+                'photo'=>$fileurl1,
                 'link'=>$highlight]
             );
         }

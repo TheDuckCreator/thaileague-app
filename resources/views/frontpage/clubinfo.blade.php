@@ -180,10 +180,10 @@
     }(document, 'script', 'facebook-jssdk'));
     </script>
 
-  </div>
+  
 
   <div class="fb-page" data-href="{{$club->facebook}}" data-width="450" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/theduckcreatorthailand/" class="fb-xfbml-parse-ignore"><a href="{{$club->facebook}}">{{$club->facebookname}}</a></blockquote></div>
-
+</div>
 
 
 @endsection

@@ -13,9 +13,9 @@
                     @else
                     <img class="highlight-1" src="{{URL::asset($allnews->photo)}}"><br>
                     @endif
-                    <div class="highlight-title-2">
-                        <a class="red-text text-accent-4 kanit" href="{{url($allnews->link)}}">{{$allnews->heading}} </a>
-                        <p class="kanitlight"> <span class="new badge grey lighten-4 black-text" style="overflow:hidden;">{{$allnews->agency}}</span> {{$allnews->newsinfo}} </p>
+                    <div class="highlight-title-3">
+                        <a class="red-text text-accent-4 kanit" href="{{url($allnews->link)}}">{{$allnews->heading}}</a>
+                        <p class="kanitlight"><span class="new badge grey lighten-4 black-text" style="overflow:hidden;">{{$allnews->agency}}</span><br>{{$allnews->newsinfo}} </p>
                     </div>
                  </div>
         @endforeach
