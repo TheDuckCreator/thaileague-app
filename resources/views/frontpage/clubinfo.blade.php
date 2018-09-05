@@ -60,9 +60,9 @@
   <table>
         <thead>
           <tr>
-              <th class="kanit">หมายเลข</th>
+              <th class="kanit">No.</th>
               <th class="kanit">รูป</th>
-              <th class="kanit">ชื่อผู้เล่น</th>
+              <th class="kanit">ชื่อ</th>
               <th class="kanit">ตำแหน่ง</th>
               <th class="kanit">สัญชาติ</th>
               <th class="kanit">ประตู</th>
@@ -144,7 +144,7 @@
                  }
                 @endphp
 
-                <td><a class="waves-effect waves-light btn {{$color}}" href="../match/{{$match->id}}">
+                <td><a class="waves-effect waves-light btn {{$color}} score-button" href="../match/{{$match->id}}">
                 <!-- different on different match status -->
                 @if($match->status=="prematch")
                     VS
@@ -182,7 +182,7 @@
 
   
 
-  <div class="fb-page" data-href="{{$club->facebook}}" data-width="450" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/theduckcreatorthailand/" class="fb-xfbml-parse-ignore"><a href="{{$club->facebook}}">{{$club->facebookname}}</a></blockquote></div>
+  <div class="fb-page" data-href="{{$club->facebook}}" data-width="300" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/theduckcreatorthailand/" class="fb-xfbml-parse-ignore"><a href="{{$club->facebook}}">{{$club->facebookname}}</a></blockquote></div>
 </div>
 
 

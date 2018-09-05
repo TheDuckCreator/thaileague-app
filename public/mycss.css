@@ -46,6 +46,14 @@ div.flexdiv{
 
 
 /*frontpage*/
+.score-button{
+    margin-left:0.5em;
+    margin-right: 0.5em;
+    padding-left:0.25em;
+    padding-right: 0.25em;
+    overflow: visible;
+    width:40px;
+}
 img.fanzone-2{
     max-height: 150px;
 }

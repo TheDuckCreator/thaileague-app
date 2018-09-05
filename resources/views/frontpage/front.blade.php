@@ -86,14 +86,14 @@
 
                 @endphp
                  
-                <td class="tablerank"><a class="waves-effect waves-light btn {{$color}}"  href="match/{{$match->id}}">
+                <td class="tablerank"><a href="match/{{$match->id}}"><button class="waves-effect waves-light btn {{$color}} score-button">
                 <!-- different on different match status -->
                 @if($match->status=="prematch")
                     VS
                 @else
                     {{$match->homescore}}-{{$match->awayscore}} 
                 @endif
-                </a></td>
+                </button></a></td>
                 <td class="tablerank">{{$match->awayteam}}</td>
                 @if($match->awayteamlogo!=NULL)
                 <td class="tablerank"><img class="frontpage1-teamlogo" src="{{URL::asset($match->awayteamlogo)}}"> </td>
